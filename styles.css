@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background: #05060a;
+    color: #e5e7eb;
+}
+
+/* HERO */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    letter-spacing: -1px;
+}
+
+.hero p {
+    margin-top: 10px;
+    opacity: 0.7;
+}
+
+/* glow background */
+.glow {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, #3b82f6, transparent 60%);
+    filter: blur(100px);
+    top: -100px;
+}
+
+/* buttons */
+.buttons {
+    margin-top: 25px;
+}
+
+.buttons a {
+    padding: 12px 20px;
+    margin: 0 8px;
+    text-decoration: none;
+    border-radius: 8px;
+    background: #3b82f6;
+    color: white;
+    transition: 0.3s;
+}
+
+.buttons a.secondary {
+    background: transparent;
+    border: 1px solid #3b82f6;
+}
+
+.buttons a:hover {
+    transform: translateY(-2px);
+}
+
+/* SECTIONS */
+.section {
+    max-width: 900px;
+    margin: auto;
+    padding: 80px 20px;
+}
+
+h2 {
+    color: #60a5fa;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 12px;
+}
+
+.card {
+    background: rgba(255,255,255,0.05);
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* PROJECTS */
+.project {
+    background: rgba(255,255,255,0.05);
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    transition: 0.3s;
+}
+
+.project:hover {
+    transform: scale(1.02);
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 30px;
+    opacity: 0.5;
+}
+
+/* ANIMATION */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
